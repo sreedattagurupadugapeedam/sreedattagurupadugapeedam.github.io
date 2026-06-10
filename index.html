@@ -960,16 +960,39 @@
 </script>
 
 <script>
-// Content protection
-document.addEventListener('contextmenu', function(e){ e.preventDefault(); }, false);
-document.addEventListener('dragstart', function(e){ e.preventDefault(); }, false);
-document.addEventListener('keydown', function(e){
-  // Block Ctrl/Cmd + S, U, C, A, P  and  F12
-  if ((e.ctrlKey || e.metaKey) && ['s','u','c','a','p'].indexOf(e.key.toLowerCase()) !== -1) {
-    e.preventDefault();
+// ===== Content protection =====
+(function(){
+  // Block right-click everywhere (capture phase = catches it before anything else)
+  document.addEventListener('contextmenu', function(e){ e.preventDefault(); return false; }, true);
+  // Block dragging
+  document.addEventListener('dragstart', function(e){ e.preventDefault(); return false; }, true);
+  // Block selection start
+  document.addEventListener('selectstart', function(e){ e.preventDefault(); return false; }, true);
+  // Block keyboard shortcuts
+  document.addEventListener('keydown', function(e){
+    var k = (e.key || '').toLowerCase();
+    if ((e.ctrlKey || e.metaKey) && ['s','u','c','a','p'].indexOf(k) !== -1) { e.preventDefault(); return false; }
+    if (k === 'f12') { e.preventDefault(); return false; }
+    // Ctrl+Shift+I / J / C (dev tools)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && ['i','j','c'].indexOf(k) !== -1) { e.preventDefault(); return false; }
+  }, true);
+  // Attach directly to every image + overlay them so they cannot be saved/dragged
+  function protectImages(){
+    var imgs = document.getElementsByTagName('img');
+    for (var i=0; i<imgs.length; i++){
+      imgs[i].setAttribute('draggable','false');
+      imgs[i].oncontextmenu = function(){ return false; };
+      imgs[i].ondragstart = function(){ return false; };
+      imgs[i].style.webkitUserSelect = 'none';
+      imgs[i].style.userSelect = 'none';
+      imgs[i].style.webkitTouchCallout = 'none';
+    }
   }
-  if (e.key === 'F12') { e.preventDefault(); }
-}, false);
+  protectImages();
+  // Re-apply after a delay in case content loads dynamically
+  setTimeout(protectImages, 1500);
+  window.addEventListener('load', protectImages);
+})();
 </script>
 </body>
 </html>

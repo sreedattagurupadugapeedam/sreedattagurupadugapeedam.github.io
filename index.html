@@ -343,6 +343,20 @@
       .nav-right { gap: 12px; }
       .lang-toggle button { padding: 5px 10px; font-size: 10px; }
     }
+
+    /* RED HIGHLIGHT BOX */
+    .red-box { border: 2px solid #C0392B; background: rgba(192,57,43,0.06); padding: 16px 18px; margin: 16px 0; border-radius: 4px; }
+    .red-text { color: #C0392B; font-weight: 600; }
+
+    /* DONATION */
+    .donate-box { max-width: 620px; margin: 0 auto; border: 2px solid var(--gold); background: rgba(200,149,42,0.05); padding: 28px; border-radius: 6px; }
+    .donate-title { font-family: 'Cinzel', serif; font-size: 15px; color: var(--saffron); letter-spacing: 0.08em; text-align: center; margin-bottom: 18px; text-transform: uppercase; }
+    .donate-table { width: 100%; border-collapse: collapse; }
+    .donate-table td { padding: 12px 10px; border-bottom: 1px solid rgba(200,149,42,0.2); font-size: 15px; vertical-align: top; }
+    .donate-table tr:last-child td { border-bottom: none; }
+    .donate-table .dl { color: var(--muted); font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; width: 40%; }
+    .donate-table .dv { color: var(--ink, #3D1F00); font-weight: 600; word-break: break-word; }
+    html[lang="ta"] .donate-title, html[lang="ta"] .donate-table .dl { font-family: 'Noto Sans Tamil','Cinzel',serif; }
   </style>
 </head>
 <body>
@@ -372,6 +386,9 @@
       </a>
       <a href="javascript:void(0)" onclick="showPage('contact',this)">
         <span data-sheet="nav_contact" data-lang="en">Contact</span><span data-sheet="nav_contact" data-lang="ta">தொடர்பு</span>
+      </a>
+      <a href="javascript:void(0)" onclick="showPage('donate',this)">
+        <span data-lang="en">Donate</span><span data-lang="ta">நன்கொடை</span>
       </a>
     </div>
     <div class="lang-toggle" role="group" aria-label="Language toggle">
@@ -550,13 +567,13 @@
     <div class="about-text" data-sheet="about_text" data-lang="en">
       <p><span class="highlight">Sree Datta Guru Paduga Peedam Trust</span> is a sacred spiritual centre devoted to spiritual awakening, humanitarian service, and the spread of self-knowledge (Atma Gnana). Situated at Beeshma Guru Nilayam, Sri Velavan Nagar, Modachur, near Gobichettipalayam in Erode District, the Peedam offers spiritual guidance and social welfare service to people of every walk of life.</p>
       <p>The Peedam continuously conducts special spiritual gatherings every <span class="highlight">Thursday (Guru day) and on full-moon days at 6:30 PM</span>. Through these sacred observances, devotees cultivate inner peace, spiritual progress, and social harmony — fostering a positive disposition that nurtures longevity, health, family unity, prosperity, and elevated thinking.</p>
-      <p>Founded upon the noble principle that <span class="highlight">"transformation of the individual is the transformation of society,"</span> the Peedam guides people away from merely external, ritual-centred spirituality toward an inner journey rooted in true wisdom.</p>
+      <p><span class="highlight">Founded upon the noble principle that "transformation of the individual is the transformation of society," the Peedam guides people away from merely external, ritual-centred spirituality toward an inner journey rooted in true wisdom.</span></p>
       <p>Following the path of the <span class="highlight">Sri Avadhuta Dattatreya tradition</span>, the Peedam functions under the leadership of the spiritual teacher and social guide <span class="highlight">Sri Sivaraja Mahabharathi</span>. People of all religions, languages, and social backgrounds are warmly invited to participate and receive the grace of the Guru, the Divine, and the Siddhas — that they may attain wellbeing and peace in life.</p>
     </div>
     <div class="about-text" data-sheet="about_text" data-lang="ta">
       <p><span class="highlight">ஸ்ரீ தத்தா குரு பாதுகா பீடம் அறக்கட்டளை</span> ஆன்மீக விழிப்புணர்வு, மனிதநேய சேவை மற்றும் ஆத்ம ஞானப் பரப்பை நோக்கமாகக் கொண்டு செயல்பட்டு வருகிறது. ஈரோடு மாவட்டம், கோபிசெட்டிபாளையம் அருகிலுள்ள மொடச்சூர், ஸ்ரீ வேலவன் நகர், பீஷ்ம குரு நிலையத்தில் அமைந்துள்ள இந்த புனித ஆன்மீக மையம், பல்வேறு தரப்பினருக்கும் ஆன்மிக வழிகாட்டுதலையும் சமூக நல சேவைகளையும் வழங்கி வருகிறது.</p>
       <p>இப்பீடம் ஒவ்வொரு வாரமும் <span class="highlight">வியாழக்கிழமை (குரு நாள்) மற்றும் பௌர்ணமி தினங்களில் மாலை 6:30 மணிக்கு</span> சிறப்பு ஆன்மீக நிகழ்வுகளை தொடர்ந்து நடத்தி வருகிறது. இந்நிகழ்வுகள் தனிநபர் மன அமைதி, ஆன்மீக முன்னேற்றம் மற்றும் சமூக ஒற்றுமையை மேம்படுத்தும் நோக்கில் நடத்தப்படுகின்றன. மேலும், மனித வாழ்வில் நீண்ட ஆயுள், ஆரோக்கியம், குடும்ப ஒற்றுமை, பொருளாதார வளம் மற்றும் உயர்ந்த சிந்தனை வளர்ச்சிக்கான நேர்மறை மனப்பாங்கை உருவாக்கும் ஆன்மீக சூழலை இப்பீடம் வழங்கி வருகிறது.</p>
-      <p><span class="highlight">"தனி மனித மாற்றமே சமுதாய மாற்றம்"</span> என்ற உயரிய கொள்கையை அடிப்படையாகக் கொண்டு, வெளிப்புற சடங்கு மைய ஆன்மீகத்திலிருந்து மெய்யறிவு சார்ந்த ஆன்மீகப் பயணத்திற்கு மக்களை வழிநடத்தும் பணியை இப்பீடம் மேற்கொண்டு வருகிறது.</p>
+      <p><span class="highlight">"தனி மனித மாற்றமே சமுதாய மாற்றம்" என்ற உயரிய கொள்கையை அடிப்படையாகக் கொண்டு, வெளிப்புற சடங்கு மைய ஆன்மீகத்திலிருந்து மெய்யறிவு சார்ந்த ஆன்மீகப் பயணத்திற்கு மக்களை வழிநடத்தும் பணியை இப்பீடம் மேற்கொண்டு வருகிறது.</span></p>
       <p><span class="highlight">ஸ்ரீ அவதூத தத்தாத்ரேய மரபின்</span> வழிமுறைகளைப் பின்பற்றி, ஆன்மீக ஆசிரியரும் சமூக வழிகாட்டியுமான <span class="highlight">ஸ்ரீ சிவராஜா மஹாபாரதி</span> அவர்களின் தலைமையில் இப்பீடம் செயல்பட்டு வருகிறது. அனைத்து மத, மொழி மற்றும் சமூகப் பின்னணியினரும் இந்நிகழ்வுகளில் பங்கேற்று குரு அருள், இறை அருள் மற்றும் சித்தர் அருளைப் பெற்று வாழ்வில் நலனும் நிம்மதியும் அடையுமாறு பீட நிர்வாகம் அன்புடன் அழைப்பு விடுத்துள்ளது.</p>
     </div>
 
@@ -721,7 +738,7 @@
           </tr>
           <tr>
             <td><span data-sheet="timings_row_evening_darshan_label" data-lang="en">Evening Darshan</span><span data-sheet="timings_row_evening_darshan_label" data-lang="ta">மாலை தரிசனம்</span></td>
-            <td>4:00 PM &ndash; 8:30 PM</td>
+            <td>4:00 PM &ndash; 7:30 PM</td>
             <td><span data-sheet="timings_row_evening_darshan_days" data-lang="en">Daily</span><span data-sheet="timings_row_evening_darshan_days" data-lang="ta">தினமும்</span></td>
           </tr>
           <tr>
@@ -731,7 +748,7 @@
           </tr>
           <tr>
             <td><span data-sheet="timings_row_sayam_label" data-lang="en">Sayam Arati</span><span data-sheet="timings_row_sayam_label" data-lang="ta">சாயம் ஆரத்தி</span></td>
-            <td>7:30 PM</td>
+            <td>7:00 PM</td>
             <td><span data-sheet="timings_row_sayam_days" data-lang="en">Daily</span><span data-sheet="timings_row_sayam_days" data-lang="ta">தினமும்</span></td>
           </tr>
           <tr>
@@ -788,6 +805,34 @@
     </div>
     <div class="contact-tagline" data-sheet="contact_tagline" data-lang="en">ALL ARE WELCOME · COME AS YOU ARE · THE GURU'S GRACE AWAITS</div>
     <div class="contact-tagline" data-sheet="contact_tagline" data-lang="ta">அனைவரும் வரவேற்கப்படுகிறீர்கள் · இருக்கும் நிலையிலேயே வாருங்கள் · குருவின் அருள் காத்திருக்கிறது</div>
+  </div>
+</div>
+
+<!-- DONATE -->
+<div id="page-donate" class="page">
+  <div class="section">
+    <div class="section-title" data-lang="en">Donation / Seva Contribution</div>
+    <div class="section-title" data-lang="ta">நன்கொடை / சேவை பங்களிப்பு</div>
+    <div class="section-under" data-lang="en">Support the Peedam's Service</div>
+    <div class="section-under" data-lang="ta">பீடத்தின் சேவைக்கு ஆதரவு அளியுங்கள்</div>
+
+    <p style="text-align:center;max-width:640px;margin:0 auto 28px;line-height:1.8;color:var(--ink-soft)" data-lang="en">Your generous contribution supports the daily pujas, Annadhana (free food service), and the spiritual and humanitarian activities of the Peedam. All donations are received with gratitude and divine blessings.</p>
+    <p style="text-align:center;max-width:640px;margin:0 auto 28px;line-height:1.9;color:var(--ink-soft)" data-lang="ta">உங்கள் தாராள பங்களிப்பு தினசரி பூஜைகள், அன்னதான சேவை மற்றும் பீடத்தின் ஆன்மீக மற்றும் மனிதநேய பணிகளுக்கு உதவுகிறது. அனைத்து நன்கொடைகளும் நன்றியுடனும் தெய்வீக ஆசீர்வாதத்துடனும் ஏற்றுக்கொள்ளப்படுகின்றன.</p>
+
+    <div class="donate-box">
+      <div class="donate-title" data-lang="en">Bank Account Details</div>
+      <div class="donate-title" data-lang="ta">வங்கி கணக்கு விவரங்கள்</div>
+      <table class="donate-table">
+        <tr><td class="dl"><span data-lang="en">Account Name</span><span data-lang="ta">கணக்கு பெயர்</span></td><td class="dv">SREE DATTA GURU PADUGA PEEDAM TRUST</td></tr>
+        <tr><td class="dl"><span data-lang="en">Account Type</span><span data-lang="ta">கணக்கு வகை</span></td><td class="dv"><span data-lang="en">Current Account</span><span data-lang="ta">நடப்பு கணக்கு</span></td></tr>
+        <tr><td class="dl"><span data-lang="en">Account Number</span><span data-lang="ta">கணக்கு எண்</span></td><td class="dv">44562496501</td></tr>
+        <tr><td class="dl">IFSC</td><td class="dv">SBIN0041088</td></tr>
+        <tr><td class="dl"><span data-lang="en">Bank</span><span data-lang="ta">வங்கி</span></td><td class="dv">State Bank of India</td></tr>
+        <tr><td class="dl"><span data-lang="en">Branch</span><span data-lang="ta">கிளை</span></td><td class="dv"><span data-lang="en">Modachur Road Branch, Gobichettipalayam</span><span data-lang="ta">மொடச்சூர் ரோடு கிளை, கோபிசெட்டிபாளையம்</span></td></tr>
+      </table>
+    </div>
+    <p style="text-align:center;margin-top:24px;font-style:italic;color:var(--ink-soft)" data-lang="en">For donation queries, please contact +91 95784 74466</p>
+    <p style="text-align:center;margin-top:24px;font-style:italic;color:var(--ink-soft)" data-lang="ta">நன்கொடை தொடர்பான விசாரணைகளுக்கு +91 95784 74466 ஐ தொடர்பு கொள்ளவும்</p>
   </div>
 </div>
 

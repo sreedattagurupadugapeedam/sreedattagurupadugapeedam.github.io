@@ -357,6 +357,12 @@
     .donate-table .dl { color: var(--muted); font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; width: 40%; }
     .donate-table .dv { color: var(--ink, #3D1F00); font-weight: 600; word-break: break-word; }
     html[lang="ta"] .donate-title, html[lang="ta"] .donate-table .dl { font-family: 'Noto Sans Tamil','Cinzel',serif; }
+
+    /* CONTENT PROTECTION */
+    body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-touch-callout: none; }
+    img { -webkit-user-drag: none; -khtml-user-drag: none; -moz-user-drag: none; -o-user-drag: none; user-drag: none; }
+    /* Allow selection in input/textarea if any */
+    input, textarea { -webkit-user-select: text; user-select: text; }
   </style>
 </head>
 <body>
@@ -951,6 +957,19 @@
     }
   }
   loadSheetContent();
+</script>
+
+<script>
+// Content protection
+document.addEventListener('contextmenu', function(e){ e.preventDefault(); }, false);
+document.addEventListener('dragstart', function(e){ e.preventDefault(); }, false);
+document.addEventListener('keydown', function(e){
+  // Block Ctrl/Cmd + S, U, C, A, P  and  F12
+  if ((e.ctrlKey || e.metaKey) && ['s','u','c','a','p'].indexOf(e.key.toLowerCase()) !== -1) {
+    e.preventDefault();
+  }
+  if (e.key === 'F12') { e.preventDefault(); }
+}, false);
 </script>
 </body>
 </html>

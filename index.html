@@ -195,10 +195,7 @@
       background: linear-gradient(90deg, transparent, var(--gold), transparent);
     }
     .lineage-divider-sym { color: var(--gold); font-size: 14px; }
-    .lineage-grid {
-      max-width: 1240px; margin: 0 auto; padding: 0 28px;
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
+    .lineage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 22px;
     }
     .guru-card {
@@ -265,13 +262,13 @@
     html[lang="ta"] .lineage-title { font-family: 'Noto Sans Tamil', 'Cinzel', serif; letter-spacing: 0.04em; }
     html[lang="ta"] .lineage-under { font-family: 'Noto Serif Tamil', 'Cormorant Garamond', serif; }
     @media (max-width: 1100px) {
-      .lineage-grid { grid-template-columns: repeat(3, 1fr); }
+      .lineage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
     }
     @media (max-width: 720px) {
-      .lineage-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+      .lineage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 18px; }
     }
     @media (max-width: 460px) {
-      .lineage-grid { grid-template-columns: 1fr; max-width: 320px; }
+      .lineage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); max-width: 320px; }
       .lineage-title { font-size: 20px; }
     }
 
@@ -457,14 +454,26 @@
     <div class="lineage-grid">
       <figure class="guru-card">
         <div class="guru-img-wrap">
-          <img class="guru-img" src="guru-dattatreya-classic.png" alt="Lord Dattar" loading="lazy"/>
+          <img class="guru-img" src="guru-dakshinamurthy.jpg" alt="Sri Dakshinamurthy" loading="lazy"/>
           <div class="guru-glow"></div>
         </div>
         <figcaption>
-          <div class="guru-name" data-sheet="guru2_name" data-lang="en">Lord Dattar</div>
-          <div class="guru-name" data-sheet="guru2_name" data-lang="ta">தத்தர்</div>
-          <div class="guru-tagline" data-sheet="guru2_tagline" data-lang="en">The Adi Guru</div>
-          <div class="guru-tagline" data-sheet="guru2_tagline" data-lang="ta">ஆதி குரு</div>
+          <div class="guru-name" data-lang="en">Sri Dakshinamurthy</div>
+          <div class="guru-name" data-lang="ta">ஸ்ரீ தட்சிணாமூர்த்தி</div>
+          <div class="guru-tagline" data-lang="en">The Silent Adi Guru</div>
+          <div class="guru-tagline" data-lang="ta">மௌன ஆதி குரு</div>
+        </figcaption>
+      </figure>
+      <figure class="guru-card">
+        <div class="guru-img-wrap">
+          <img class="guru-img" src="guru-dattatreya-classic.png" alt="Lord Dattatreya" loading="lazy"/>
+          <div class="guru-glow"></div>
+        </div>
+        <figcaption>
+          <div class="guru-name" data-lang="en">Lord Dattatreya</div>
+          <div class="guru-name" data-lang="ta">ஸ்ரீ தத்தாத்ரேயர்</div>
+          <div class="guru-tagline" data-lang="en">The Adi Guru</div>
+          <div class="guru-tagline" data-lang="ta">ஆதி குரு</div>
         </figcaption>
       </figure>
       <figure class="guru-card">
@@ -475,6 +484,32 @@
         <figcaption>
           <div class="guru-name" data-lang="en">Shri Parashuramar</div>
           <div class="guru-name" data-lang="ta">ஸ்ரீ பரசுராமர்</div>
+          <div class="guru-tagline" data-lang="en">The Warrior Sage</div>
+          <div class="guru-tagline" data-lang="ta">வீர முனிவர்</div>
+        </figcaption>
+      </figure>
+      <figure class="guru-card">
+        <div class="guru-img-wrap">
+          <img class="guru-img" src="guru-shankara.jpg" alt="Adi Shankaracharya" loading="lazy"/>
+          <div class="guru-glow"></div>
+        </div>
+        <figcaption>
+          <div class="guru-name" data-lang="en">Adi Shankaracharya</div>
+          <div class="guru-name" data-lang="ta">ஆதி சங்கராச்சாரியார்</div>
+          <div class="guru-tagline" data-lang="en">The Advaita Master</div>
+          <div class="guru-tagline" data-lang="ta">அத்வைத குரு</div>
+        </figcaption>
+      </figure>
+      <figure class="guru-card">
+        <div class="guru-img-wrap">
+          <img class="guru-img" src="guru-babaji.jpg" alt="Mahavatar Babaji" loading="lazy"/>
+          <div class="guru-glow"></div>
+        </div>
+        <figcaption>
+          <div class="guru-name" data-lang="en">Mahavatar Babaji</div>
+          <div class="guru-name" data-lang="ta">மகாவதார் பாபாஜி</div>
+          <div class="guru-tagline" data-lang="en">The Immortal Yogi</div>
+          <div class="guru-tagline" data-lang="ta">சிரஞ்சீவி யோகி</div>
         </figcaption>
       </figure>
       <figure class="guru-card">
@@ -483,22 +518,22 @@
           <div class="guru-glow"></div>
         </div>
         <figcaption>
-          <div class="guru-name" data-sheet="guru3_name" data-lang="en">Sri Sadasiva Brahmendra Avadhuta Swamigal</div>
-          <div class="guru-name" data-sheet="guru3_name" data-lang="ta">ஸ்ரீ சதாசிவ பிரம்மேந்திர அவதூத சுவாமிகள்</div>
-          <div class="guru-tagline" data-sheet="guru3_tagline" data-lang="en">Of Nerur</div>
-          <div class="guru-tagline" data-sheet="guru3_tagline" data-lang="ta">நெரூர்</div>
+          <div class="guru-name" data-lang="en">Sri Sadasiva Brahmendra Avadhuta Swamigal</div>
+          <div class="guru-name" data-lang="ta">ஸ்ரீ சதாசிவ பிரம்மேந்திர அவதூத சுவாமிகள்</div>
+          <div class="guru-tagline" data-lang="en">Of Nerur</div>
+          <div class="guru-tagline" data-lang="ta">நெரூர்</div>
         </figcaption>
       </figure>
       <figure class="guru-card">
         <div class="guru-img-wrap">
-          <img class="guru-img" src="guru-mahatma.png" alt="Kashi Trailangar — Sri Ganapati Saraswati Avadhuta Swamigal" loading="lazy"/>
+          <img class="guru-img" src="guru-trailanga.jpg" alt="Kashi Trailanga Swami" loading="lazy"/>
           <div class="guru-glow"></div>
         </div>
         <figcaption>
-          <div class="guru-name" data-sheet="guru5_name" data-lang="en">Kashi Trailangar — Sri Ganapati Saraswati Avadhuta Swamigal</div>
-          <div class="guru-name" data-sheet="guru5_name" data-lang="ta">காசி திரைலங்கர் — ஸ்ரீ கணபதி சரஸ்வதி அவதூத சுவாமிகள்</div>
-          <div class="guru-tagline" data-sheet="guru5_tagline" data-lang="en">The Walking Shiva of Kashi</div>
-          <div class="guru-tagline" data-sheet="guru5_tagline" data-lang="ta">காசியின் நடமாடும் சிவன்</div>
+          <div class="guru-name" data-lang="en">Kashi Trailanga Swami</div>
+          <div class="guru-name" data-lang="ta">காசி திரைலங்க சுவாமிகள்</div>
+          <div class="guru-tagline" data-lang="en">The Walking Shiva of Kashi</div>
+          <div class="guru-tagline" data-lang="ta">காசியின் நடமாடும் சிவன்</div>
         </figcaption>
       </figure>
       <figure class="guru-card">
@@ -507,8 +542,32 @@
           <div class="guru-glow"></div>
         </div>
         <figcaption>
-          <div class="guru-name" data-sheet="guru4_name" data-lang="en">Sri Swayamprakasha Brahmendra Saraswati Avadhuta Swamigal</div>
-          <div class="guru-name" data-sheet="guru4_name" data-lang="ta">ஸ்ரீ ஸ்வயம்பிரகாச பிரம்மேந்திர சரஸ்வதி அவதூத சுவாமிகள்</div>
+          <div class="guru-name" data-lang="en">Sri Swayamprakasha Brahmendra Saraswati Avadhuta Swamigal</div>
+          <div class="guru-name" data-lang="ta">ஸ்ரீ ஸ்வயம்பிரகாச பிரம்மேந்திர சரஸ்வதி அவதூத சுவாமிகள்</div>
+        </figcaption>
+      </figure>
+      <figure class="guru-card">
+        <div class="guru-img-wrap">
+          <img class="guru-img" src="guru-saibaba.jpg" alt="Shirdi Sai Baba" loading="lazy"/>
+          <div class="guru-glow"></div>
+        </div>
+        <figcaption>
+          <div class="guru-name" data-lang="en">Shirdi Sai Baba</div>
+          <div class="guru-name" data-lang="ta">ஷிர்டி சாய் பாபா</div>
+          <div class="guru-tagline" data-lang="en">The Fakir Saint</div>
+          <div class="guru-tagline" data-lang="ta">பக்த சாய்</div>
+        </figcaption>
+      </figure>
+      <figure class="guru-card">
+        <div class="guru-img-wrap">
+          <img class="guru-img" src="guru-ramana.jpg" alt="Bhagavan Ramana Maharshi" loading="lazy"/>
+          <div class="guru-glow"></div>
+        </div>
+        <figcaption>
+          <div class="guru-name" data-lang="en">Bhagavan Ramana Maharshi</div>
+          <div class="guru-name" data-lang="ta">பகவான் ரமண மகரிஷி</div>
+          <div class="guru-tagline" data-lang="en">The Sage of Arunachala</div>
+          <div class="guru-tagline" data-lang="ta">அருணாசல முனிவர்</div>
         </figcaption>
       </figure>
       <figure class="guru-card">
@@ -517,47 +576,12 @@
           <div class="guru-glow"></div>
         </div>
         <figcaption>
-          <div class="guru-name" data-sheet="guru6_name" data-lang="en">Kasavanampatti Sri Mouna Jothi Nirvana Swamigal</div>
-          <div class="guru-name" data-sheet="guru6_name" data-lang="ta">கசவனம் பட்டி ஸ்ரீ மௌன ஜோதி நிர்வாண சுவாமிகள்</div>
-          <div class="guru-tagline" data-sheet="guru6_tagline" data-lang="en">The Silent Flame</div>
-          <div class="guru-tagline" data-sheet="guru6_tagline" data-lang="ta">மௌன ஜோதி</div>
+          <div class="guru-name" data-lang="en">Kasavanampatti Sri Mouna Jothi Nirvana Swamigal</div>
+          <div class="guru-name" data-lang="ta">கசவனம் பட்டி ஸ்ரீ மௌன ஜோதி நிர்வாண சுவாமிகள்</div>
+          <div class="guru-tagline" data-lang="en">The Peedam Guru — The Silent Flame</div>
+          <div class="guru-tagline" data-lang="ta">பீட குரு — மௌன ஜோதி</div>
         </figcaption>
       </figure>
-    </div>
-  </div>
-
-  <div class="divider"><div class="divider-line"></div><div class="divider-sym">❋</div><div class="divider-line"></div></div>
-
-  <div class="section">
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-icon">🪔</div>
-        <h4 data-sheet="card_daily_puja_title" data-lang="en">Daily Puja</h4>
-        <h4 data-sheet="card_daily_puja_title" data-lang="ta">தினசரி பூஜை</h4>
-        <p data-sheet="card_daily_puja_desc" data-lang="en">Morning and evening arati performed with devotion every day of the year.</p>
-        <p data-sheet="card_daily_puja_desc" data-lang="ta">ஆண்டின் ஒவ்வொரு நாளும் காலை மற்றும் மாலை ஆரத்தி பக்தியுடன் செய்யப்படுகிறது.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">📿</div>
-        <h4 data-sheet="card_guru_purnima_title" data-lang="en">Guru Purnima</h4>
-        <h4 data-sheet="card_guru_purnima_title" data-lang="ta">குரு பூர்ணிமா</h4>
-        <p data-sheet="card_guru_purnima_desc" data-lang="en">Grand celebrations honouring the Datta Guru lineage with special rituals.</p>
-        <p data-sheet="card_guru_purnima_desc" data-lang="ta">தத்தா குரு பரம்பரையை சிறப்பு சடங்குகளுடன் கௌரவிக்கும் பெருங்கொண்டாட்டம்.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">🌿</div>
-        <h4 data-sheet="card_satsang_title" data-lang="en">Satsang</h4>
-        <h4 data-sheet="card_satsang_title" data-lang="ta">சத்சங்கம்</h4>
-        <p data-sheet="card_satsang_desc" data-lang="en">Weekly spiritual discourses, bhajans, and group meditation open to all.</p>
-        <p data-sheet="card_satsang_desc" data-lang="ta">அனைவருக்கும் திறந்த வாரந்தோறும் ஆன்மீக சொற்பொழிவுகள், பஜனைகள் மற்றும் குழு தியானம்.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">🙏</div>
-        <h4 data-sheet="card_paduga_seva_title" data-lang="en">Paduga Seva</h4>
-        <h4 data-sheet="card_paduga_seva_title" data-lang="ta">பாதுகா சேவை</h4>
-        <p data-sheet="card_paduga_seva_desc" data-lang="en">Revered worship of the sacred Padugas — the divine footprints of the Guru.</p>
-        <p data-sheet="card_paduga_seva_desc" data-lang="ta">புனித பாதுகைகளின் வழிபாடு — குருவின் தெய்வீக பாதச்சுவடுகள்.</p>
-      </div>
     </div>
   </div>
 </div>
